@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MyWPF
+namespace Dairy
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

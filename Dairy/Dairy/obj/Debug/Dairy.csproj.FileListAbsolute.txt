@@ -14,3 +14,6 @@ D:\записник\Dairy\Dairy\Dairy\obj\Debug\Dairy.pdb
 D:\project\GitHub\Dairy\Dairy\Dairy\bin\Debug\Dairy.exe.config
 D:\project\GitHub\Dairy\Dairy\Dairy\obj\Debug\Dairy.exe
 D:\project\GitHub\Dairy\Dairy\Dairy\obj\Debug\Dairy.pdb
+D:\записник\Dairy1\Dairy\Dairy\bin\Debug\Dairy.exe.config
+D:\записник\Dairy1\Dairy\Dairy\obj\Debug\Dairy.exe
+D:\записник\Dairy1\Dairy\Dairy\obj\Debug\Dairy.pdb

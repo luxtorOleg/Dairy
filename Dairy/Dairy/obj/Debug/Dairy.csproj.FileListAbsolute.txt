@@ -11,3 +11,6 @@ D:\записник\Dairy\Dairy\Dairy\obj\Debug\Dairy.Properties.Resources.resou
 D:\записник\Dairy\Dairy\Dairy\obj\Debug\Dairy.csproj.GenerateResource.Cache
 D:\записник\Dairy\Dairy\Dairy\obj\Debug\Dairy.exe
 D:\записник\Dairy\Dairy\Dairy\obj\Debug\Dairy.pdb
+D:\project\GitHub\Dairy\Dairy\Dairy\bin\Debug\Dairy.exe.config
+D:\project\GitHub\Dairy\Dairy\Dairy\obj\Debug\Dairy.exe
+D:\project\GitHub\Dairy\Dairy\Dairy\obj\Debug\Dairy.pdb

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DairyPro.Properties
+namespace MyWPF.Properties
 {
 
 

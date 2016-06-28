@@ -1,0 +1,13 @@
+D:\записник\Dairy\Dairy\Dairy\bin\Debug\Dairy.exe.config
+D:\записник\Dairy\Dairy\Dairy\bin\Debug\Dairy.exe
+D:\записник\Dairy\Dairy\Dairy\bin\Debug\Dairy.pdb
+D:\записник\Dairy\Dairy\Dairy\obj\Debug\Dairy.csprojResolveAssemblyReference.cache
+D:\записник\Dairy\Dairy\Dairy\obj\Debug\MainWindow.baml
+D:\записник\Dairy\Dairy\Dairy\obj\Debug\MainWindow.g.cs
+D:\записник\Dairy\Dairy\Dairy\obj\Debug\App.g.cs
+D:\записник\Dairy\Dairy\Dairy\obj\Debug\Dairy_MarkupCompile.cache
+D:\записник\Dairy\Dairy\Dairy\obj\Debug\Dairy.g.resources
+D:\записник\Dairy\Dairy\Dairy\obj\Debug\Dairy.Properties.Resources.resources
+D:\записник\Dairy\Dairy\Dairy\obj\Debug\Dairy.csproj.GenerateResource.Cache
+D:\записник\Dairy\Dairy\Dairy\obj\Debug\Dairy.exe
+D:\записник\Dairy\Dairy\Dairy\obj\Debug\Dairy.pdb

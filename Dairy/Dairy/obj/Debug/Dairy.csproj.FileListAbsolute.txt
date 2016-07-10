@@ -17,3 +17,16 @@ D:\project\GitHub\Dairy\Dairy\Dairy\obj\Debug\Dairy.pdb
 D:\записник\Dairy1\Dairy\Dairy\bin\Debug\Dairy.exe.config
 D:\записник\Dairy1\Dairy\Dairy\obj\Debug\Dairy.exe
 D:\записник\Dairy1\Dairy\Dairy\obj\Debug\Dairy.pdb
+D:\project\GitHub\Dairy\Dairy\Dairy\bin\Debug\Dairy.exe
+D:\project\GitHub\Dairy\Dairy\Dairy\bin\Debug\Dairy.pdb
+D:\project\GitHub\Dairy\Dairy\Dairy\obj\Debug\Dairy.csprojResolveAssemblyReference.cache
+D:\project\GitHub\Dairy\Dairy\Dairy\obj\Debug\MainWindow.baml
+D:\project\GitHub\Dairy\Dairy\Dairy\obj\Debug\LoginWindow.g.cs
+D:\project\GitHub\Dairy\Dairy\Dairy\obj\Debug\MainWindow.g.cs
+D:\project\GitHub\Dairy\Dairy\Dairy\obj\Debug\App.g.cs
+D:\project\GitHub\Dairy\Dairy\Dairy\obj\Debug\Dairy_MarkupCompile.cache
+D:\project\GitHub\Dairy\Dairy\Dairy\obj\Debug\Dairy_MarkupCompile.lref
+D:\project\GitHub\Dairy\Dairy\Dairy\obj\Debug\LoginWindow.baml
+D:\project\GitHub\Dairy\Dairy\Dairy\obj\Debug\Dairy.g.resources
+D:\project\GitHub\Dairy\Dairy\Dairy\obj\Debug\Dairy.Properties.Resources.resources
+D:\project\GitHub\Dairy\Dairy\Dairy\obj\Debug\Dairy.csproj.GenerateResource.Cache

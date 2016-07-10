@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -10,22 +9,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Dairy
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for LoginWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginWindow : Window
     {
-        LoginWindow logWin;
-        public MainWindow()
+        public bool isOpenMain = false;
+        public LoginWindow()
         {
-            logWin = new LoginWindow();            
-            logWin.Show();
-                InitializeComponent();
+            InitializeComponent();
+        }
+        private void buttonLog_Click(object sender, RoutedEventArgs e)
+        {
+            isOpenMain = true;
+            this.Close();
         }
     }
 }

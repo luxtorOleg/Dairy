@@ -1,0 +1,121 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="LoginService.Login" %>
+using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+using System.ServiceModel;
+using System.Text;
+using System.Data.SqlClient;
+using System.Web;
+using System.IO;
+
+namespace LoginService
+{
+    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "LogService" in code, svc and config file together.
+    // NOTE: In order to launch WCF Test Client for testing this service, please select LogService.svc or LogService.svc.cs at the Solution Explorer and start debugging.
+    public class Login : ILogin
+    {
+        public bool CreateAcount(string Login, string pass)
+        {
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = "workstation id=Logins1.mssql.somee.com;packet size=4096;user id=olegozibko_SQLLogin_1;pwd=u1uqwwbw48;data source=Logins1.mssql.somee.com;persist security info=False;initial catalog=Logins1";
+            connection.Open();
+            string LoginAndPassword = Login + " " + pass;
+            SqlCommand commandLog = new SqlCommand("Select Logins.Login,Logins.Pass_word from Logins where Logins.Login ='" + Login + "' and " + " Logins.Pass_word ='" + pass + "'", connection);
+            SqlDataReader reader = commandLog.ExecuteReader();
+            while (reader.Read())
+            {
+                string readLogin = string.Format("{0} {1}", reader[0], reader[1]);
+                if (LoginAndPassword == readLogin)
+                {
+                    connection.Close();
+                    return false;
+                }
+            }
+            reader.Close();
+            SqlCommand commandReg = new SqlCommand("INSERT INTO Logins (Login,Pass_word) VALUES ('" + Login + "', '" + pass + "');", connection);
+            commandReg.ExecuteNonQuery();
+            connection.Close();
+            return true;
+
+        }
+        public bool SuccsessLogin(string Login, string pass)
+        {
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = "workstation id=Logins1.mssql.somee.com;packet size=4096;user id=olegozibko_SQLLogin_1;pwd=u1uqwwbw48;data source=Logins1.mssql.somee.com;persist security info=False;initial catalog=Logins1";
+            connection.Open();
+            string LoginAndPassword = Login + " " + pass;
+            SqlCommand command = new SqlCommand("Select Logins.Login,Logins.Pass_word from Logins where Logins.Login ='" + Login + "' and " + " Logins.Pass_word ='" + pass + "'", connection);
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string readLogin = string.Format("{0} {1}", reader[0], reader[1]);
+                if (LoginAndPassword == readLogin)
+                {
+                    connection.Close();
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        string returnPath(string FolderName)
+        {
+            return @"d:/DZHosts/LocalUser/olegozibko/www.luxtServ.somee.com/" + FolderName;
+        }
+        public void deleteFileFromServer(string name, string FolderName)
+        {
+            File.Delete(returnPath(FolderName) + "/" + name);
+        }
+        public byte[] downloadFileFromServer(string name, string FolderName)
+        {
+            string pathToFile = returnPath(FolderName) + "/" + name;
+            byte[] convertFile = File.ReadAllBytes(pathToFile);
+            return convertFile;
+        }
+        public string[] CreateFolder(string FolderName)
+        {
+            DirectoryInfo directoryInfo;
+            string path = returnPath(FolderName);
+            string[] Files;
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+                File.Create(path + "/myFile.txt");
+                directoryInfo = new DirectoryInfo(path);
+                Files = Directory.GetFiles(directoryInfo.FullName);
+                return Files;
+            }
+            else if (Directory.Exists(path))
+            {
+                directoryInfo = new DirectoryInfo(path);
+                Files = Directory.GetFiles(directoryInfo.FullName);
+                return Files;
+
+            }
+            else
+            {
+                return null;
+            }
+        }
+        public void saveFileOnServer(byte[] convertFile, string FolderName, string fileName)
+        {
+            File.WriteAllBytes(returnPath(FolderName) + fileName, convertFile);
+        }
+    }
+    [ServiceContract]
+    public interface ILogin
+    {
+        [OperationContract]
+        void deleteFileFromServer(string name, string FolderName);
+        [OperationContract]
+        byte[] downloadFileFromServer(string name, string FolderName);
+        [OperationContract]
+        void saveFileOnServer(byte[] convertFile, string FolderName, string fileName);
+        [OperationContract]
+        bool CreateAcount(string Login, string pass);
+        [OperationContract]
+        string[] CreateFolder(string FolderName);
+        [OperationContract]
+        bool SuccsessLogin(string Login, string pass);
+    }
+}

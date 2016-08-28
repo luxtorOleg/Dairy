@@ -1,0 +1,14 @@
+CREATE TABLE INFOTable
+(
+ID int IDENTITY(1,1) PRIMARY KEY,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255) NOT NULL,
+FatherName varchar(255) NOT NULL,
+City varchar(255) NOT NULL,
+BothDate varchar(255) NOT NULL,
+Login varchar(255) NOT NULL,
+PasswordField varchar(255) NOT NULL
+)
+
+
+INSERT INTO Persons(LastName,FirstName,FatherName,City,BothDate,Login,PasswordField) VALUES('Olzhibko','Oleg',);
